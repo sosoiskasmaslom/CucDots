@@ -1,0 +1,6 @@
+[manager]
+ratio = [1, 3, 4]
+show_hidden = true
+
+[previewers]
+text = ["bat", "--style=plain", "--color=always", "--theme=Dracula"]

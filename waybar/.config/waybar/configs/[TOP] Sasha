@@ -1,0 +1,46 @@
+
+// My first rice of waybar 03.02.26
+// I love you, Sasha
+
+{
+"include" : [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesGroups"
+], "gtk-layer-shell": true,
+"layer": "top",
+"exclusive": true,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+
+"margin-left": 6,
+"margin-right": 6,
+"margin-top": 3,
+
+"passthrough": false,
+"ipc": true,
+
+"modules-left": [
+    "custom/archicon",
+    "custom/separator#blank_1",
+    "clock",
+    "custom/separator#blank_1",
+	"hyprland/workspaces#pacman",
+],
+
+"modules-center": [
+	"custom/cava_mviz",
+    "custom/playerctl",
+	"custom/cava_mviz",
+],
+
+"modules-right": [
+    "custom/swaync",
+    "tray",
+    "custom/separator#line",
+    "hyprland/language",
+    "group/system#power"
+]
+}

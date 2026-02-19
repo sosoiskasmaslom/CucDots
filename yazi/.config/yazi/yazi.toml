@@ -1,0 +1,21 @@
+[mgr]
+ratio = [1, 3, 4]
+show_hidden = false
+
+[previewers]
+text = ["bat", "--style=plain", "--color=always", "--theme=Dracula"]
+
+[opener]
+pdf = [
+	{ run = 'evince "$@"', desc = "PDF motherfucker" }
+]
+photo = [
+	{ run = 'loupe "$@"', desc = "Photo motherfucker" }
+]
+
+[open]
+prepend_rules = [
+	{ name = "*.pdf", use = "pdf" },
+	{ name = "*.djvu", use = "pdf" },
+	{ name = "*.jpg", use = "photo" },
+]
