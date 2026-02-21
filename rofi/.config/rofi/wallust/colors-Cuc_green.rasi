@@ -1,0 +1,13 @@
+
+* {
+    font: "Iosevka 14";
+
+    BG:    #1E1D2Fef; // фон
+    BGA:   #39ff14ff; // фон альтернатива
+    FG:    #D9E0EEff; // текст
+    FGA:   #F28FADff; // текст альтернатива
+    BDR:   #1DB427ff; // границы
+    UGT:   #F28FADcf;
+    IMG:   #FAE3B0ff;
+    ZER:   #00000000; // прозрачный цвет
+}
