@@ -130,7 +130,7 @@ shotactive() {
 
 shotswappy() {
 	tmpfile=$(mktemp)
-	grim -g "$(slurp)" - >"$tmpfile"
+	grim -g "$(slurp)" -s 0 - >"$tmpfile"
 
   # Copy without saving
   if [[ -s "$tmpfile" ]]; then
