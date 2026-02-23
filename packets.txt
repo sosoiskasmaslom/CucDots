@@ -1,0 +1,15 @@
+espanso
+evince
+fastfetch
+hypr
+kitty
+nvim
+peaclock
+qutebrowser
+rofi
+swappy
+swaync
+vim
+waybar
+yazi
+zsh
