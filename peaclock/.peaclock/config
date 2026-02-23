@@ -1,0 +1,27 @@
+# peaclock config
+# file: .peaclock/config
+# date: 2026-02-23T19:42:55Z
+
+mode clock
+view digital
+toggle active-bg
+stopwatch start
+timer 10m:0s
+timer-exec 'notify-send -a peaclock "timer complete"'
+set date on
+set seconds off
+set hour-24 off
+set auto-size off
+set auto-ratio on
+style active-fg clear
+style active-bg #A020F0
+style inactive-fg clear
+style inactive-bg clear
+style colon-fg clear
+style colon-bg clear
+style date clear
+style text clear
+style background clear
+style prompt clear
+style success green
+style error red

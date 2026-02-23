@@ -1,0 +1,16 @@
+mkconfig .peaclock/config
+block block-x 1
+block-x 1
+block-x 100
+block 100 100
+padding 100 100
+margin 100 100
+padding 100 100
+margin 10 10
+margin 0 0
+block 0 0
+block 10 10
+block 15 20
+block 15 15
+ratio 15 15
+ratio 100 100
