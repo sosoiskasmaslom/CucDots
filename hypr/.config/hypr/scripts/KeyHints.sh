@@ -30,7 +30,7 @@ GDK_BACKEND=$BACKEND yad \
 "" "" "" \
 " A / D" "Move" "left / right" \
 " SHIFT A / D" "Move active window" "left / right" \
-" CTRL H / J / K / L" "Move focus" "left / down / up / right" \
+" CTRL A / S / W / D" "Move focus" "left / down / up / right" \
 "" "" "" \
 " R" "Terminal" "(kitty)" \
 " B" "Launch Browser" "(Default browser)" \
