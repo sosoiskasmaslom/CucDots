@@ -28,6 +28,10 @@ GDK_BACKEND=$BACKEND yad \
 " H" "Launch this Quick Cheat Sheet" "" \
 " SHIFT K" "Searchable Keybinds" "(Search all Keybinds via rofi)" \
 "" "" "" \
+" A / D" "Move" "left / right" \
+" SHIFT A / D" "Move active window" "left / right" \
+" CTRL H / J / K / L" "Move focus" "left / down / up / right" \
+"" "" "" \
 " R" "Terminal" "(kitty)" \
 " B" "Launch Browser" "(Default browser)" \
 " E" "Open yazi without root" "" \
@@ -35,7 +39,6 @@ GDK_BACKEND=$BACKEND yad \
 " S" "Application Launcher" "(rofi-wayland)" \
 " Q" "close active window" "(not kill)" \
 " Shift Q " "kills an active window" "(kill)" \
-" A / D" "Move to left / right" "" \
 "" "" "" \
 " CTRL P" "Pause media" "" \
 " CTRL [" "Launch previous media" "" \
