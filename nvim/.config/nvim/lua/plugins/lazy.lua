@@ -113,6 +113,7 @@ require('lazy').setup({
         ensure_installed = {
           'lua', 'python', 'javascript', 'typescript',
           'rust', 'go', 'html', 'css', 'json', 'markdown',
+          'cpp', 'c'
         },
         highlight    = { enable = true },
         indent       = { enable = true },
@@ -134,10 +135,11 @@ require('lazy').setup({
       require('mason').setup()
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'lua_ls',      -- Lua
-          'pyright',     -- Python
-          'ts_ls',       -- TypeScript / JavaScript
+          'lua_ls',        -- Lua
+          'pyright',       -- Python
+          'ts_ls',         -- TypeScript / JavaScript
           'rust_analyzer', -- Rust
+          'clangd',           -- C++
         },
         handlers = {
           function(server_name)
