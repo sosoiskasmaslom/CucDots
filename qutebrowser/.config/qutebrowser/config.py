@@ -32,6 +32,10 @@ c.bindings.key_mappings = {
 # ───── Changelog ─────
 c.changelog_after_upgrade = 'minor'
 
+# ───── Вертикальные вкладки слева ─────
+c.tabs.position = 'left'
+c.tabs.width = 200  # ширина панели в пикселях
+
 # ───── Colors ─────
 c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
 c.colors.completion.category.border.bottom = 'black'
@@ -55,13 +59,10 @@ c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
 }
 
-# ───── Bindings: swap H ↔ J ─────
-# Дефолт: H = back, J = tab-prev
-config.bind('H', 'tab-prev')
-config.bind('J', 'back')
+# ───── Tabs moving ─────
+config.bind('K', 'tab-prev')
+config.bind('J', 'tab-next')
 
-# ───── Bindings: swap L ↔ K ─────
-# Дефолт: L = forward, K = tab-next
-config.bind('L', 'tab-next')
-config.bind('K', 'forward')
+config.bind('H', 'back')
+config.bind('L', 'forward')
 
