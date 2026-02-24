@@ -108,9 +108,9 @@ shotwin() {
 
 shotarea() {
 	tmpfile=$(mktemp)
-	grim -g "$(slurp)" -s 0 - >"$tmpfile"
+	grim -g "$(slurp -w 0)" - >"$tmpfile"
 
-  # Copy with saving
+    # Copy with saving
 	if [[ -s "$tmpfile" ]]; then
 		wl-copy <"$tmpfile"
 		mv "$tmpfile" "$dir/$file"
@@ -129,21 +129,21 @@ shotactive() {
 }
 
 shotswappy() {
-	tmpfile=$(mktemp)
-	grim -g "$(slurp)" -s 0 - >"$tmpfile"
-
-  # Copy without saving
-  if [[ -s "$tmpfile" ]]; then
-		wl-copy <"$tmpfile"
+    tmpfile=$(mktemp --suffix=.png)
+    grim -g "$(slurp -w 0)" "$tmpfile"
+    if [[ -s "$tmpfile" ]]; then
+        wl-copy --type image/png < "$tmpfile"
+        swappy -f "$tmpfile"
+        rm "$tmpfile"
+    fi
     notify_view "swappy"
-  fi
 }
 
 if [[ ! -d "$dir" ]]; then
 	mkdir -p "$dir"
 fi
 
-if [[ "$1" == "--now" ]]; then
+if   [[ "$1" == "--now" ]]; then
 	shotnow
 elif [[ "$1" == "--in5" ]]; then
 	shot5
