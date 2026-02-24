@@ -108,7 +108,7 @@ shotwin() {
 
 shotarea() {
 	tmpfile=$(mktemp)
-	grim -g "$(slurp -w 0)" - >"$tmpfile"
+	grim -g "$(slurp -w 0 -b \#0000009f)" - >"$tmpfile"
 
     # Copy with saving
 	if [[ -s "$tmpfile" ]]; then
@@ -130,7 +130,7 @@ shotactive() {
 
 shotswappy() {
     tmpfile=$(mktemp --suffix=.png)
-    grim -g "$(slurp -w 0)" "$tmpfile"
+    grim -g "$(slurp -w 0 -b \#0000009f)" "$tmpfile"
     if [[ -s "$tmpfile" ]]; then
         wl-copy --type image/png < "$tmpfile"
         swappy -f "$tmpfile"
