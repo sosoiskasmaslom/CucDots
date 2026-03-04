@@ -1,0 +1,50 @@
+# ~/.config/cmus/rc
+
+# ===== Переключение видов =====
+bind -f common 1 view 1
+bind -f common 2 view 2
+bind -f common 3 view 3
+bind -f common 4 view 4
+bind -f common 5 view 5
+bind -f common 6 view 6
+bind -f common 7 view 7
+
+# ===== Навигация (hjkl) =====
+bind -f common h seek -5
+bind -f common l seek +5
+bind -f common j win-down
+bind -f common k win-up
+bind -f common g win-top
+bind -f common G win-bottom
+
+# ===== Плеер =====
+bind -f common space player-pause
+bind -f common s win-activate
+bind -f common n player-next
+bind -f common p player-prev
+
+# ===== Громкость (как resize в nvim) =====
+bind -f common + vol +5%
+bind -f common - vol -5%
+bind -f common 0 vol 50%
+
+# ===== Shuffle / Repeat (как toggle-опции) =====
+bind -f common r toggle repeat
+bind -f common R toggle repeat_current
+bind -f common z toggle shuffle
+
+# ===== Добавление треков =====
+bind -f browser space win-activate
+bind -f browser a win-add-l      # добавить в библиотеку
+bind -f browser e win-add-Q      # добавить в очередь
+
+bind -f library a win-add-q      # добавить в очередь из библиотеки
+bind -f playlist d win-remove    # удалить из плейлиста (как dd в nvim)
+bind -f queue d win-remove       # удалить из очереди
+
+# ===== Поиск (как / в nvim) =====
+bind -f common / win-search
+bind -f common m win-search-next # следующий результат (как n в nvim)
+
+# ===== Выход =====
+bind -f common q quit

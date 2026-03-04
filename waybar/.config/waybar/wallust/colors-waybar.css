@@ -1,24 +1,34 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */  
- /* wallust template - colors-waybar */
+/* ============================================ */
+/* ЦВЕТОВАЯ СХЕМА - СИНЯЯ ПАЛИТРА */
+/* ============================================ */
 
- @define-color foreground #B0E4F3;
- @define-color background #1E1D28;
- @define-color background-alt rgba(30,29,40,0.25);
- @define-color cursor #5D81A5;
- 
- @define-color color0 #45434F;
- @define-color color1 #07123C;
- @define-color color2 #081541;
- @define-color color3 #183F80;
- @define-color color4 #1C4A8F;
- @define-color color5 #6376A5;
- @define-color color6 #1686A5;
- @define-color color7 #86D1E5;
- @define-color color8 #5D92A0;
- @define-color color9 #091850;
- @define-color color10 #0B1D57;
- @define-color color11 #2154AA;
- @define-color color12 #2662BF;
- @define-color color13 #849DDC;
- @define-color color14 #1DB3DC;
- @define-color color15 #86D1E5; 
+/* ОСНОВНЫЕ ЦВЕТА */
+@define-color foreground #B0E4F3;              /* Светло-голубой - основной текст */
+@define-color background #1E1D28;              /* Тёмно-фиолетовый - основной фон */
+@define-color background-alt rgba(30,29,40,0.25);  /* Полупрозрачный фон - альтернативный */
+@define-color cursor #5D81A5;                  /* Серо-голубой - курсор */
+
+/* ТЁМНЫЕ ОТТЕНКИ (0-5) */
+@define-color color0 #45434F;                  /* Тёмно-серый */
+@define-color color1 #07123C;                  /* Очень тёмный синий (почти чёрный) */
+@define-color color2 #081541;                  /* Тёмно-синий */
+@define-color color3 #183F80;                  /* Насыщенный тёмно-синий */
+@define-color color4 #1C4A8F;                  /* Средне-тёмный синий */
+@define-color color5 #6376A5;                  /* Приглушённый серо-синий */
+
+/* ЯРКИЕ АКЦЕНТЫ (6-7) */
+@define-color color6 #1686A5;                  /* Бирюзовый - акцентный */
+@define-color color7 #86D1E5;                  /* Светло-голубой - яркий акцент */
+
+/* СРЕДНИЕ ОТТЕНКИ (8-10) */
+@define-color color8 #5D92A0;                  /* Приглушённый голубой */
+@define-color color9 #091850;                  /* Тёмно-синий (темнее color2) */
+@define-color color10 #0B1D57;                 /* Тёмно-синий (между color2 и color9) */
+
+/* СВЕТЛЫЕ ОТТЕНКИ (11-15) */
+@define-color color11 #2154AA;                 /* Яркий синий */
+@define-color color12 #2662BF;                 /* Ярко-синий (светлее color11) */
+@define-color color13 #849DDC;                 /* Светло-синий с серым */
+@define-color color14 #1DB3DC;                 /* Яркий бирюзовый */
+@define-color color15 #86D1E5;                 /* Светло-голубой (дубль color7) */
+

@@ -32,9 +32,8 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias discord='nohup flatpak run com.discordapp.Discord &'
-alias macos='echo "connect to macos \nip addr 192.168.1.153 port 2223"; kitten ssh -i ~/.ssh/macos -p 2223 cuc@77.239.106.193'
-alias asus='echo "connect to asus \nip addr 192.168.1.73 port 2222"; kitten ssh -i ~/.ssh/asus -p 2222 cuc@77.239.106.193'
+
+alias dc='cd'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)

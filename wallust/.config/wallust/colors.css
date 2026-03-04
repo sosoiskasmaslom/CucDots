@@ -1,0 +1,24 @@
+
+@define-color black    #000000
+@define-color red      #FF0000
+@define-color green    #00FF00
+@define-color yellow   #FFFF00
+@define-color blue     #0000FF
+@define-color pink     #FF00FF
+@define-color cyan     #1DB3DC;
+@define-color white    #FFFFFF
+
+@define-color light_blue    #89b4fa;
+@define-color lavender      #b4befe;
+@define-color sapphire      #74c7ec;
+@define-color sky           #89dceb;
+@define-color teal          #94e2d5;
+@define-color light_green   #a6e3a1;
+@define-color light_yellow  #f9e2af;
+@define-color peach         #fab387;
+@define-color maroon        #eba0ac;
+@define-color light_red     #f38ba8;
+@define-color mauve         #cba6f7;
+@define-color light_pink    #f5c2e7;
+@define-color flamingo      #f2cdcd;
+@define-color rosewater     #f5e0dc;

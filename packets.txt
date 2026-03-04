@@ -1,3 +1,4 @@
+cmus
 espanso
 evince
 fastfetch

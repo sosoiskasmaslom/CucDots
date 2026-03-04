@@ -1,0 +1,11 @@
+ref
+add music
+delete
+deleter
+shell 
+source ~/.config/cmus/rc
+q
+Q
+bind -f browser space win-activate
+add music/
+add
