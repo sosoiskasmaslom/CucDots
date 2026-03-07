@@ -41,7 +41,7 @@
         },
 	"modules": [
 		"custom/keyboard",
-		"temperature",		
+		"temperature",
 		"cpu",
 		"memory",
 		"disk",
@@ -122,28 +122,25 @@
         "custom/reboot"
       ]
 },
-// groups for vertical
-"group/power#vert": {
-     "orientation": "inherit",
-     "drawer": {
-        "transition-duration": 300,
-        "children-class": "not-memory",
-        "transition-left-to-right": false
-       },
-     "modules": [
-        "custom/power",
-        "custom/lock",
-        "custom/logout",
-        "custom/reboot"
-      ]
+
+"group/noti": {
+    "orientation": "inherit",
+    "modules": [
+        "group/audio",
+        "hyprland/language",
+        "battery",
+        "custom/swaync",
+        "tray",
+    ]
 },
 
-"group/system#power": {
-	"orientation": "inherit",
-	"modules": [
-		"battery",
-		"custom/power"
-	]
-},
+"group/music": {
+    "orientation" : "inherit",
+    "modules": [
+        // "custom/cava_mviz",
+        "custom/playerctl",
+        "custom/cava_mviz",
+    ]
+}
 
 }

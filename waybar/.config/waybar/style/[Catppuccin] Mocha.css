@@ -1,15 +1,7 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Catppuccin Mocha */
 
-* {
-	font-family: "JetBrainsMono Nerd Font";
-	font-weight: bold;
-	min-height: 0;
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
-	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-}
-
+@define-color arch #1793d1;
 @define-color base   #1e1e2e;
 @define-color mantle #181825;
 @define-color crust  #11111b;
@@ -41,22 +33,24 @@
 @define-color flamingo  #f2cdcd;
 @define-color rosewater #f5e0dc;
 
-/* This section can be use if you want to separate waybar modules */
-.modules-left, .modules-center, .modules-right {
-	background: @theme_base_color; 
+.modules-center {
+	font-family: "JetBrainsMono Nerd Font";
+	font-weight: bold;
+    color: @yellow;
+	font-size: 100%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+
+	background: @theme_base_color;
  	border: 0.5px solid @overlay0;
+	border-radius: 10px;
+
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
 	padding-left: 4px;
-	border-radius: 10px;
-} 
-
-.modules-right {
-  	border: 1px solid @green;
-    min-width: 330px;
 }
 
+#pulseaudio,
 #language,
 #battery,
 #clock,
@@ -75,35 +69,16 @@
 	padding-left: 6px;
 }
 
-/* Left module */
-
-.modules-left {
-  	border: 1px solid @blue;
-} 
-
 /* I use Arch, btw */
 #custom-archicon {
-    color: #1793d1;  
-    font-size: 20px;  
+    color: @arch;
+    font-size: 20px;
 }
 
-/* Часы с календарём в tooltip */
+/* Часы */
 #clock {
     padding: 4px 10px;
-    color: @yellow;
     font-size: 15px;
-}
-
-/* Стили для tooltip с календарём */
-tooltip {
-    background: @theme_base_color;
-    border: 1px solid @overlay0;
-    border-radius: 10px;
-}
-
-tooltip label {
-    color: @text;
-    padding: 8px;
 }
 
 #window {
@@ -172,23 +147,11 @@ window#waybar.empty #window {
  	border-radius: 0px;
 }
 
-/* Middle module */
-
-#custom-playerctl,
-#custom-cava_mviz {
-	color: @pink;
-}
-
 #custom-playerctl {
   font-size: 13px;
 }
 
-
-/* Right module */
-
 #custom-swaync {
-  /* margin-right: auto; */
-  color: @green;
   font-size: 15px;
 }
 
@@ -199,16 +162,6 @@ window#waybar.empty #window {
   -gtk-icon-effect: highlight;
 }
 
-#language {
-  color: @green;
-  font-size: 14px;
-}
-
-#battery {
-  color: @green;
-  font-size: 17px
-}
-
 @keyframes blink {
   to {
     color: @surface0;
@@ -217,6 +170,7 @@ window#waybar.empty #window {
 
 #battery.critical:not(.charging) {
   background-color: @red;
+  border-radius: 5px;
   color: @theme_text_color;
 	animation-name: blink;
 	animation-duration: 3.0s;
@@ -227,6 +181,20 @@ window#waybar.empty #window {
 }
 
 #custom-power {
-  color: @green;
+  color: @arch;
   font-size: 15px;
 }
+
+tooltip {
+    background: @theme_base_color;
+    border: 1.5px solid @arch;
+    border-radius: 10px;
+}
+
+tooltip label {
+    padding: 8px;
+    color: @arch;
+    font-size: 20px;
+	font-weight: bold;
+}
+

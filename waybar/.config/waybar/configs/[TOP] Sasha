@@ -8,7 +8,9 @@
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesGroups"
-], "gtk-layer-shell": true,
+],
+
+"gtk-layer-shell": true,
 "layer": "top",
 "exclusive": true,
 "position": "top",
@@ -23,24 +25,19 @@
 "ipc": true,
 
 "modules-left": [
-    "custom/archicon",
-    "custom/separator#blank_1",
-    "clock",
-    "custom/separator#blank_1",
-	"hyprland/workspaces#pacman",
 ],
 
 "modules-center": [
-	"custom/cava_mviz",
-    "custom/playerctl",
-	"custom/cava_mviz",
+    "custom/archicon",
+    "custom/separator#blank_1",
+    "clock",
+	"hyprland/workspaces#pacman",
+    "custom/separator#blank_1",
+    "group/noti",
+    "custom/separator#line",
+    "group/music"
 ],
 
 "modules-right": [
-    "custom/swaync",
-    "tray",
-    "custom/separator#line",
-    "hyprland/language",
-    "group/system#power"
 ]
 }
