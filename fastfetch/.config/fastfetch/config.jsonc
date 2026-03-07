@@ -123,12 +123,12 @@
         //     "key": "└ └󰉼 Theme",
         //     "keyColor": "blue"
         // },
-        {
-            "type": "command",
-            "key": "└ └IP address",
-            "keyColor": "magenta",
-            "text": "dig +short myip.opendns.com @resolver1.opendns.com"
-        },
+        // {
+        //     "type": "command",
+        //     "key": "└ └IP address",
+        //     "keyColor": "magenta",
+        //     "text": "dig +short myip.opendns.com @resolver1.opendns.com"
+        // },
         {
             "type": "custom",
             "format": "└──────────────────────────────────────────────────────┘",
