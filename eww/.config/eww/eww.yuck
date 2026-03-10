@@ -1,0 +1,27 @@
+
+;; Activate Linux pls ;;
+(defwidget activate-linux []
+    (box
+       :orientation "v"
+       :halign "start"
+       :valign "start"
+       (label
+          :xalign 0
+          :markup "<span font_size=\"large\">Activate Linux</span>"
+       )
+       (label :xalign 0 :text "Say 'I use Arch, btw'")
+    )
+)
+
+(defwindow activate-linux
+    :monitor 1
+    :stacking "fg"
+    :geometry (geometry
+        :x "0px"
+        :y "32px"
+        :width "175px"
+        :anchor "bottom right"
+    )
+    (activate-linux)
+)
+
