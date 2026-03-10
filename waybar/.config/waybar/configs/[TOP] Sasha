@@ -6,19 +6,20 @@
 "include" : [
   "$HOME/.config/waybar/Modules",
   "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesVertical",
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesGroups"
 ],
 
 "gtk-layer-shell": true,
 "layer": "top",
-"exclusive": true,
-"position": "top",
+"position": "left",
+"exclusive": false,
 "spacing": 6,
-"fixed-center": true,
 
+"width": 75,
 "margin-left": 6,
-"margin-right": 6,
+"margin-bottom": 6,
 "margin-top": 3,
 
 "passthrough": false,
@@ -30,14 +31,21 @@
 "modules-center": [
     "custom/archicon",
     "custom/separator#blank_1",
-    "clock",
+    "clock#vertical",
 	"hyprland/workspaces#pacman",
     "custom/separator#blank_1",
     "group/noti",
-    "custom/separator#line",
-    "group/music"
+    "custom/separator#underline",
+    "custom/cava_mviz",
 ],
 
 "modules-right": [
-]
+],
+
+"tray": {
+    "icon-size": 20,
+    "spacing": 8,
+    "show-passive-items": true,
+    "reverse-direction": false
+}
 }

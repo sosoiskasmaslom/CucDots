@@ -143,9 +143,10 @@
 },
 
 "hyprland/language": {
-    "format": "⌨ {}",
+    "format": "{}",
     "format-en": "EN",
-    "format-ru": "RU"
+    "format-ru": "RU",
+    "on-click": "hyprctl switchxkblayout all next"
 },
 
 "hyprland/submap": {
@@ -279,7 +280,8 @@
 	"on-click-right": "pavucontrol -t 3",
 	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --inc",
 	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --dec",
-	"tooltip-format": "{icon} {desc} | {volume}%",
+	"tooltip-format": "<span color=\"white\" font=\"JetBrainsMono Nerd Font 10\">{desc}</span>",
+	"tooltip-markup": true,
 	"smooth-scrolling-threshold": 1,
 },
 
@@ -311,7 +313,8 @@
 	"on-click-right": "pavucontrol -t 4",
 	"on-scroll-up": "$HOME/.config/hypr/scripts/Volume.sh --mic-inc",
 	"on-scroll-down": "$HOME/.config/hypr/scripts/Volume.sh --mic-dec",
-	"tooltip-format": "{source_desc} | {source_volume}%",
+	"tooltip-format": "<span color=\"white\" font=\"JetBrainsMono Nerd Font 10\">{desc}</span>",
+	"tooltip-markup": true,
 	"scroll-step": 5,
 },
 

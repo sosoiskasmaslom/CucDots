@@ -130,7 +130,7 @@
         "hyprland/language",
         "battery",
         "custom/swaync",
-        "tray",
+        "tray"
     ]
 },
 

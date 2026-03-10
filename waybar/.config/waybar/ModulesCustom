@@ -27,7 +27,7 @@
 
 // This is a custom cava visualizer
 "custom/cava_mviz": {
-	"exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
+	"exec": "$HOME/.config/waybar/scripts/WaybarCava.sh",
 	"format": "{}",
 	"tooltip": false,
 },
@@ -50,12 +50,11 @@
 },
 
 "custom/archicon": {
-	"format": "  ",
+	"format": "",
 	"on-click": "$HOME/.config/hypr/scripts/Wlogout.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/ChangeBlur.sh",
-	"tooltip": true,
-	// "tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur",
-	"tooltip-format": "I use Arch, btw",
+	"on-click-right": "$HOME/.config/hypr/scripts/LockScreen.sh",
+	"tooltip-format": "<span font='Rubik Glitch 20'>I use Arch, btw</span>",
+	"tooltip-markup": true,
 },
 
 "custom/reboot": {
@@ -107,6 +106,11 @@
 },
 "custom/separator#line": {
 	"format": "|",
+	"interval": "once",
+	"tooltip": false
+},
+"custom/separator#underline": {
+	"format": "——",
 	"interval": "once",
 	"tooltip": false
 },

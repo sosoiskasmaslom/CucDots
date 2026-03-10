@@ -1,0 +1,35 @@
+#!/bin/bash
+
+CONFIG="$HOME/.config/waybar"
+HIDE_DELAY=25
+VISIBLE=true
+TIMER=0
+
+# Получаем x начало левого монитора
+LEFT_EDGE=$(hyprctl monitors -j | jq '[.[] | .x] | min')
+EDGE=$((LEFT_EDGE + 5))
+RIGHT_EDGE=$((LEFT_EDGE + 80))
+
+while true; do
+  MOUSE_X=$(hyprctl cursorpos -j | jq '.x')
+
+  if [ "$MOUSE_X" -le "$EDGE" ]; then
+    if [ "$VISIBLE" = false ]; then
+      waybar --config "$CONFIG/config" --style "$CONFIG/style.css" &
+      disown
+      sleep 1
+      VISIBLE=true
+    fi
+    TIMER=0
+  else
+    TIMER=$((TIMER + 1))
+    if [ "$TIMER" -ge "$HIDE_DELAY" ] && [ "$VISIBLE" = true ] && [ "$MOUSE_X" -ge "$RIGHT_EDGE" ]; then
+      killall waybar 2>/dev/null
+      VISIBLE=false
+      TIMER=0
+    fi
+  fi
+
+  sleep 0.1
+done
+
