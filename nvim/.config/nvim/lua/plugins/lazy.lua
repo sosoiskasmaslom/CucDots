@@ -113,7 +113,7 @@ require('lazy').setup({
         ensure_installed = {
           'lua', 'python', 'javascript', 'typescript',
           'rust', 'go', 'html', 'css', 'json', 'markdown',
-          'cpp', 'c'
+          'cpp', 'c', 'yuck'
         },
         highlight    = { enable = true },
         indent       = { enable = true },
