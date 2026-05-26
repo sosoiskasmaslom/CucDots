@@ -61,7 +61,7 @@ require('lazy').setup({
     config = function()
       require('toggleterm').setup({
         size = 15,
-        open_mapping = [[<C-`>]],  -- Ctrl + ` для открытия/закрытия
+        open_mapping = [[<C-\>]],  -- Ctrl + ` для открытия/закрытия
         direction = 'horizontal',   -- horizontal, vertical, tab, float
         shade_terminals = true,
       })

@@ -6,6 +6,7 @@ fi
 # --- PATH and environment ---
 export PATH="$HOME/scripts:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # --- Go environment ---
 export GOPROXY=direct
@@ -18,6 +19,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
     archlinux
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -42,10 +45,8 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias vim='nvim'
 
-# --- FZF key bindings ---
-if [ -f ~/.fzf.zsh ]; then
-    source ~/.fzf.zsh
-fi
+# --- FZF ---
+source <(fzf --zsh)
 
 # --- History ---
 HISTFILE=~/.zsh_history
