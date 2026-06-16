@@ -16,9 +16,11 @@
     hypridle
     rofi
     kitty
+    tmux
     dunst
     grim
     slurp
+    stow
     brightnessctl
     ddcutil
     wl-clipboard
