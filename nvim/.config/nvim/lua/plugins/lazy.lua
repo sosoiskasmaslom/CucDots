@@ -69,6 +69,69 @@ require('lazy').setup({
   },
 
   -- ==========================================
+  -- Markdown editor
+  -- ==========================================
+  {
+    'epwalsh/obsidian.nvim',
+    version = '*',
+    ft = 'markdown',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      require('obsidian').setup({
+        workspaces = {
+          {
+            name = 'Obsidian Vault',
+            path = '~/Documents/Obsidian Vault',  -- путь к хранилищу
+          },
+        },
+        completion = {
+          nvim_cmp = true,  -- используем ваш существующий nvim-cmp
+          min_chars = 2,
+        },
+        mappings = {
+          ['gf'] = {
+            action = function()
+              return require('obsidian').util.gf_passthrough()
+            end,
+            opts = { noremap = false, expr = true, buffer = true },
+          },
+        },
+        ui = { enable = false },
+      })
+    end,
+  },
+
+  -- ==========================================
+  -- Markdown-рендеринг (заголовки, списки, таблицы)
+  -- ==========================================
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    ft = 'markdown',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',  -- у вас уже есть
+      'nvim-tree/nvim-web-devicons',      -- у вас уже есть (используется в neo-tree)
+    },
+    config = function()
+      require('render-markdown').setup({
+        heading = {
+          enabled = true,
+          sign = false,
+          icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' }, -- иконки по уровню H1–H6
+          width = 'full',       -- фон на всю ширину строки
+          backgrounds = {
+            'RenderMarkdownH1Bg', 'RenderMarkdownH2Bg', 'RenderMarkdownH3Bg',
+            'RenderMarkdownH4Bg', 'RenderMarkdownH5Bg', 'RenderMarkdownH6Bg',
+          },
+        },
+        bullet = { enabled = true },
+        checkbox = { enabled = true },
+      })
+    end,
+  },
+
+  -- ==========================================
   -- Строка состояния
   -- ==========================================
   {
@@ -113,7 +176,7 @@ require('lazy').setup({
         ensure_installed = {
           'lua', 'python', 'javascript', 'typescript',
           'rust', 'go', 'html', 'css', 'json', 'markdown',
-          'cpp', 'c'
+          'markdown_inline', 'cpp', 'c'
         },
         highlight    = { enable = true },
         indent       = { enable = true },
@@ -187,6 +250,7 @@ require('lazy').setup({
           end, { 'i', 's' }),
         }),
         sources = {
+          { name = 'obsidian' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'buffer' },

@@ -41,3 +41,11 @@ autocmd('BufWritePre', {
     vim.fn.winrestview(save)
   end,
 })
+
+autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.opt_local.conceallevel = 2
+    vim.opt_local.concealcursor = 'nc'  -- скрывать в normal/command, показывать в insert
+  end,
+})
