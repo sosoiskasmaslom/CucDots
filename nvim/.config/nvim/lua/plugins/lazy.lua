@@ -171,7 +171,8 @@ require('lazy').setup({
     {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    vim.filetype.add({
+    init = function()
+      vim.filetype.add({
         extension = {
           sage = 'python',
           spyx = 'python', -- Cython-вставки Sage, опционально
